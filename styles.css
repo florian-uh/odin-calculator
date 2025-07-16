@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  font-family: Arial;
+}
+/* Themes par défaut */
+body.light {
+  background: #f0f0f0;
+  color: black;
+}
+body.dark {
+  background: #1e1e1e;
+  color: white;
+}
+body.retro {
+  background: #fefbd8;
+  color: #333;
+}
+
+/* Adaptation display + boutons par thème */
+body.light .calculator {
+  background: white;
+}
+body.dark .calculator {
+  background: #2b2b2b;
+}
+body.retro .calculator {
+  background: #f9f2d0;
+}
+
+body.dark .btn {
+  background: #444;
+  color: white;
+}
+body.retro .btn {
+  background: #ffde7d;
+  color: black;
+}
+
+.theme-switcher {
+  text-align: center;
+  margin: 20px;
+}
+.calculator {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  background: white;
+  box-shadow: 0 0 10px #bbb;
+}
+
+.display {
+  background: #222;
+  color: #0f0;
+  font-size: 2.5rem;
+  padding: 20px;
+  text-align: right;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #eee;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn.operator {
+  background: #ffc107;
+}
+
+.btn.equals {
+  background: #28a745;
+  color: white;
+  grid-column: span 1;
+}
+
+.btn:hover {
+  filter: brightness(90%);
+}
